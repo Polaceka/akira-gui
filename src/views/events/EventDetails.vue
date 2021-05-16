@@ -43,7 +43,6 @@ export default {
         border-radius: 3px;
         margin: 10px auto;
         max-width: 500px;
-        cursor: pointer;
         color: #444;
     }
 </style>

@@ -5,6 +5,7 @@
         <div v-for='event in events' :key="event.id" class="event">
             <router-link :to="{ name: 'EventDetails', params: { id: event.id }}">
                 <h2>{{ event.name }}</h2>
+                <p>{{ event.startdate }}</p>
             </router-link> 
         </div>
     </div>
@@ -31,16 +32,18 @@ export default {
 </script>
 
 <style>
-    .event h2{
+    .event{
         background: #f4f4f4;
         padding: 20px;
         border-radius: 3px;
         margin: 10px auto;
         max-width: 500px;
         cursor: pointer;
+    }
+    .event h2,p{
         color: #444;
     }
-    .event h2:hover{
+    .event:hover{
         background: #ddd;
     }
     .event a{
